@@ -10,29 +10,6 @@
 
 It helps businesses manage **products, warehouses, stock movements, and inventory transfers** with secure authentication and real-time updates.
 
----
-
-# 📸 Screenshots
-
-(Add screenshots of your application UI)
-
-### Login Page
-
-![Login](screenshots/login.png)
-
-### Dashboard
-
-![Dashboard](screenshots/dashboard.png)
-
-### Product Management
-
-![Products](screenshots/products.png)
-
-### Stock Transfer
-
-![Transfer](screenshots/transfer.png)
-
----
 
 # ✨ Features
 
