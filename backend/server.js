@@ -7,14 +7,19 @@ require('dotenv').config();
 
 const app    = express();
 const server = http.createServer(app);
-const io     = new Server(server, {
-  cors: { origin: '*', methods: ['GET', 'POST'] }
+const io = new Server(server, {
+  cors: {
+    origin: [
+      "http://localhost:3000",
+      "https://coreinventory-ai.netlify.app"
+    ],
+    methods: ["GET", "POST"]
+  }
 });
-
 app.use(cors({
   origin: [
     "http://localhost:3000",
-    "https://coreinventory-ai.onrender.com"
+    "https://coreinventory-ai.netlify.app"
   ],
   credentials: true
 }));
@@ -35,7 +40,7 @@ app.get('/', (req, res) => res.send('CoreInventory API running'));
 
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
-    console.log('MongoDB connected → localhost:27017');
+    console.log('MongoDB connected');
     server.listen(process.env.PORT || 5000, () =>
       console.log('Backend running → http://localhost:5000')
     );
