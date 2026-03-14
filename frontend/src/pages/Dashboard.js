@@ -4,7 +4,7 @@ import { Layout } from '../App';
 import api from '../services/api';
 import io from 'socket.io-client';
 
-const socket = io('http://localhost:5000');
+const socket = io("https://coreinventory-ai.onrender.com");
 
 const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
